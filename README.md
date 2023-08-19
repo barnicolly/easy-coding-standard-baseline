@@ -1,10 +1,22 @@
 ## Установка
 
+Укажите в composer.json путь к репозиторию:
+
+```
+ "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/barnicolly/easy-coding-standard-baseline.git"
+    }
+  ],
+```
+
 Установите зависимости для разработки:
 
 ```bash
-composer require --dev spaceonfire/easy-coding-standard-bridge symfony/var-exporter
+composer require --dev barnicolly/easy-coding-standard-baseline
 ```
+
 
 ## Использование
 
