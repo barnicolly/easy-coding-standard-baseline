@@ -191,7 +191,7 @@ function collect_baseline_errors(array $errorFiles): array
  */
 function render_baseline_config(array $baselineErrors): string
 {
-    $content = file_get_contents(__DIR__ . '/../resources/templates/ecs-baseline.php');
+    $content = file_get_contents(__DIR__ . '/../resources/ecs-baseline.php');
 
     if (false === $content) {
         throw new RuntimeException('Unable to read ecs-baseline.php config template.');
