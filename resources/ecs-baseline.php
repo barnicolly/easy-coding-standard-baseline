@@ -2,14 +2,11 @@
 
 declare(strict_types=1);
 
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
+return static function (ECSConfig $ecsConfig): void
+{
     $baselineErrors = [];
-
     $skipSettings = [];
 
     foreach ($baselineErrors as $filename => $errors) {
@@ -22,5 +19,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         }
     }
 
-    $parameters->set(Option::SKIP, $skipSettings);
+    $ecsConfig->skip($skipSettings);
 };
